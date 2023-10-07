@@ -1,0 +1,245 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgba(100, 126, 150, 0.747);
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(143, 167, 207);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: rgb(29, 29, 78);
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 20px rgb(143, 167, 207);
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: rgb(70, 68, 68);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: antiquewhite;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/*  ESTILO DO MENU MOBILE */
+.btn-abrir-menu i {
+    color: rgb(29, 29, 78);
+    font-size: 40px;
+}
+
+.menu-mobile {
+    background-color: rgba(100, 126, 150, 0.747);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu~.overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: rgb(29, 29, 78);
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.466);
+    color: black;
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.637);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* ESTILO DO SLIDER*/
+.slider{
+    margin: 60px auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 600%;
+    height: 390px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.imagem{
+    width: 25%;
+    position: relative;
+}
+
+.imagem img{
+    width: 1300px;
+}
+
+.manual-nav{
+    position: absolute;
+    width: 800px;
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid rgb(29, 29, 78);
+  padding: 5px;  
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 30px;
+}
+
+.manual-btn:hover{
+    background-color: rgb(29, 29, 78);
+}
+
+#radio1:checked ~ .primeira{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .primeira{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeira{
+    margin-left: -55%;
+}
+
+#radio4:checked ~ .primeira{
+    margin-left: -75%;
+}
+
+.nav-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 290px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: white;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: white;
+}
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: white;
+}
+#radio4:checked ~ .nav-auto .auto-btn4{
+    background-color: white;
+}
